@@ -1,0 +1,63 @@
+.ng2-range-points {
+  padding: 0 18px;
+}
+
+.ng2-range-points ul {
+  display: block;
+  margin: 0;
+  position: relative;
+  padding: 42px 0 12px;
+}
+
+.ng2-range-points ul:before {
+  display: block;
+  height: 12px;
+  background: #00c189;
+  border-radius: 6px;
+  content: " ";
+}
+
+.ng2-range-points ul li {
+  position: absolute;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  margin: -12px;
+  background: #00c189;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.5);
+  top: 48px;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.ng2-range-points ul li:before {
+  content: attr(data-value);
+  display: inline-block;
+  position: absolute;
+  top: calc(-100% - 6px);
+  font-size: 15px;
+  line-height: 15px;
+  background: #aaaaaa;
+  color: white;
+  border-radius: 6px;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.5);
+  padding: 6px;
+  margin: 0 50%;
+  white-space: nowrap;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.ng2-range-points ul li.moving {
+  z-index: 2000 !important;
+}
+
+.ng2-range-points ul li.moving:before {
+  background: #555555;
+}
+
+/*# sourceMappingURL=ng2-range-points.css.map */

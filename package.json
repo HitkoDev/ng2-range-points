@@ -1,0 +1,19 @@
+{
+  "name": "ng2-range-points",
+  "version": "0.0.1",
+  "description": "Range slider with multiple input points",
+  "main": "ng2-range-points.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@angular/core": "^2.0.0-rc.1",
+    "bourbon": "^4.2.7",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-typescript": "^2.13.4"
+  }
+}

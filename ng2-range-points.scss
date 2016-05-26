@@ -1,0 +1,63 @@
+@import "bourbon";
+
+.ng2-range-points {
+    
+    $slider-base: 24px;
+    $slider-color: #00c189;
+    padding: 0 $slider-base*0.75;
+    
+    ul {
+        display: block;
+        margin: 0;
+        position: relative;
+        padding: $slider-base*1.75 0 $slider-base/2;
+            
+        &:before {
+            display: block;
+            height: $slider-base/2;
+            background: $slider-color;
+            border-radius: $slider-base/4;
+            content: " ";
+        }
+        
+        li {
+            position: absolute;
+            display: block;
+            width: $slider-base;
+            height: $slider-base;
+            border-radius: $slider-base/2;
+            margin: -$slider-base/2;
+            background: $slider-color;
+            box-shadow: 0 0 $slider-base/2 -$slider-base/8 rgba(black, 0.5);
+            top: $slider-base*2;
+            cursor: pointer;
+            pointer-events: none;
+            
+            &:before {
+                content: attr(data-value);
+                display: inline-block;
+                position: absolute;
+                top: calc(-100% - #{$slider-base/4});
+                font-size: $slider-base * 0.625;
+                line-height: $slider-base * 0.625;
+                background: tint(black, 2/3*100%);
+                color: white;
+                border-radius: $slider-base/4;
+                box-shadow: 0 0 $slider-base/2 -$slider-base/8 rgba(black, 0.5);
+                padding: $slider-base/4;
+                margin: 0 50%;
+                white-space: nowrap;
+                
+                @include transform(translateX(-50%));
+            }
+            
+            &.moving {
+                z-index: 2000 !important;
+                
+                &:before {
+                    background: tint(black, 1/3*100%);
+                }
+            }
+        }
+    }
+}

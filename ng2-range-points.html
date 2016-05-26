@@ -1,0 +1,6 @@
+<div class="ng2-range-points" (touchstart)="hold($event)" (touchend)="release($event)" (touchmove)="move($event)" (mousedown)="hold($event)">
+    <ul #slider>
+        <li *ngFor="let break of breakpoints; let i = index" [ngStyle]="{left: (100*_getPosition(break.value)) + '%', 'z-index': getIndex(break.value)}"
+            [attr.data-value]="break.getLabel()" [ngClass]="i == holding ? 'moving' : ''"></li>
+    </ul>
+</div>
